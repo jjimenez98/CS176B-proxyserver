@@ -1,6 +1,9 @@
 import socket
 import time
 import random
+
+#Pythom time method time() returns the time as a floating point number expressed in seconds.
+
 current_sim_time=0
 sim_time_at_sync=0
 current_sys_time=0
@@ -10,10 +13,12 @@ t=time.time()
 p=(t-0.5)/t
 while True:
     t1=time.time()
+
     print ("this is T1 %s" %(t1))
+    print (time.asctime( time.localtime(time.time()) ))
     s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    port=2002
-    s.connect((socket.gethostname(),port))
+    port=2001
+    s.connect((socket.gethostbyname(""),port))
     msg = s.recv(1024)
     print (msg)
     t=s.recv(1024)

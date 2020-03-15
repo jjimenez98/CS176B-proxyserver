@@ -2,8 +2,8 @@ import socket
 import time
 s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 print ("Socket Created")
-port=2059
-s.bind((socket.gethostname(),port))
+port=2052
+s.bind((socket.gethostbyname(""),port))
 print ("Socket binded to %s" %(port))
 s.listen(5)
 print ("Socket is listenting")
