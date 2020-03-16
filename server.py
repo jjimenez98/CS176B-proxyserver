@@ -26,13 +26,12 @@ while True:
             new_msg = False
         full_msg += msg.decode("utf-8")                                         #get message
         if len(full_msg) - HEADERSIZE == msglen:
-            print("full msg recvd")
+            print("full msg recvd:")
             print(full_msg[HEADERSIZE:])
             new_msg = True
             full_msg == ''
             time.sleep(0.5)                                                     #delay
             t=time.time()                                                       #get time of OS
-            print (time.time())
             clientsocket.send(bytes(str(t),"utf-8"))                            #send time of the OS of server
             print ("\n")
             clientsocket.close()
