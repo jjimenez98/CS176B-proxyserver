@@ -10,5 +10,5 @@ You can run multiple instances of client.py because we added multithreading to t
 
 The other file included is text.txt, it is not a significant file, it is just what we used for reference when 
 getting our text for the messages. It is just so that it is easeir to grasp our explanation of how we set up the first 
-we performed with RTT.
+test we performed with RTT.
 
